@@ -1,0 +1,29 @@
+spring:
+  main:
+    banner-mode: ${BANNER_MODE:off}
+  data:
+    jpa:
+      repositories:
+        bootstrap-mode: ${REPOSITORIES_BOOTSTRAP_MODE:deferred}
+  datasource:
+    url: ${DATASOURCE_URL:jdbc:h2:mem:testdb}
+    username: ${DATASOURCE_USERNAME:sa}
+    password: ${DATASOURCE_PASSWORD:password}
+    driver-class-name: ${DATASOURCE_DRIVER_CLASS_NAME:org.h2.Driver}
+  jackson:
+    property-naming-strategy: ${JACKSON_PROPERTY_NAMING_STRATEGY:SNAKE_CASE}
+    default-property-inclusion: ${JACKSON_DEFAULT_PROPERTY_INCLUSION:non_null}
+    deserialization:
+      fail-on-unknown-properties: ${DESERIALIZATION_FAIL_ON_UNKNOWN_PROPERTIES:false}
+  jpa:
+    properties:
+      hibernate:
+        jdbc:
+          batch_size: ${HIBERNATE_JDBC_BATCH_SIZE:1000}
+    hibernate:
+      ddl-auto: ${HIBERNATE_DDL_AUTO:update}
+
+springdoc:
+  swagger-ui:
+    path: ${SWAGGER_UI_PATH:/swagger-ui.html}
+    operationsSorter: ${SWAGGER_UI_OPERATIONS_SORTER:method}

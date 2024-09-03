@@ -1,0 +1,30 @@
+# Ignore build directories
+build/
+out/
+
+# Ignore Gradle-specific files
+.gradle/
+.gradle-cache/
+
+# Ignore dependency caches
+**/build/libs/
+**/build/reports/
+**/build/tmp/
+**/build/classes/
+
+# Ignore IDE-specific files
+.idea/
+*.iml
+*.ipr
+*.iws
+*.swp
+
+# Ignore local environment files
+.env
+
+# Ignore log files
+*.log
+
+# Ignore temporary files
+*.tmp
+.DS_Store

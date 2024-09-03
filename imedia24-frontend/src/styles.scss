@@ -1,0 +1,30 @@
+$padding-base: 8px;
+$padding-large: 20px;
+$auto-grid-min-size: 300px;
+$picture-dimensions: 200px;
+
+body {
+  padding: $padding-base;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.picture {
+  height: $picture-dimensions;
+  width: $picture-dimensions;
+}
+
+.auto-grid {
+  --auto-grid-min-size: $auto-grid-min-size;
+  
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+  grid-gap: $padding-large;
+}
+
+.padding-20 {
+  padding: $padding-large;
+}
